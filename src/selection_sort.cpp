@@ -7,15 +7,12 @@
 using namespace std;
 namespace itis {
 
-  void selectionSort(vector<int> vector, int n) {
-    for (int i = 0; i < n; i++)
-    {
+  void selectionSort(vector<int> &vector, int n) {
+    for (int i = 0; i < n; i++) {
       int min_index = i;
       int min_element = vector[i];
-      for (int j = i + 1; j < n; j++)
-      {
-        if (vector[j] < min_element)
-        {
+      for (int j = i + 1; j < n; j++) {
+        if (vector[j] < min_element) {
           min_element = vector[j];
           min_index = j;
         }
@@ -23,4 +20,4 @@ namespace itis {
       swap(vector[i], vector[min_index]);
     }
   }
-} // namespace itis
+}  // namespace itis
